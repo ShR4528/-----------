@@ -8,3 +8,13 @@ h1 {
 .btn {
   cursor: pointer;
 }
+.clicked {
+  color: yellowgreen;
+}
+.form,
+.greetings {
+  display: none;
+}
+.showing {
+  display: block;
+}
