@@ -11,8 +11,8 @@ function saveUser(text) {
 function submitHundler(event) {
     event.preventDefault();
     const inputValue = input.value;
-    showGreeting(inputValue)
-    saveUser(inputValue)
+    showGreeting(inputValue);
+    saveUser(inputValue);
 }
 
 function showGreeting(text) {
