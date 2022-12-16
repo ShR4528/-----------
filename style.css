@@ -4,6 +4,9 @@ body {
 h1 {
   color: whitesmoke;
 }
+.js-weather {
+  color: whitesmoke;
+}
 
 .btn {
   cursor: pointer;
