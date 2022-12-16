@@ -3,8 +3,7 @@ const todoForm = document.querySelector('.js-todoForm'),
     todoList = document.querySelector('.js-todoList');
 
 const TODOS_LS = 'toDos';
-const todos = [];
-
+let todos = [];
 
 function loadToDos() {
     const loaded_todos = localStorage.getItem(TODOS_LS);
@@ -21,7 +20,14 @@ function saveTodos() {
 }
 
 function deleteTodo(event) {
-
+    const btn = event.target;
+    const li = btn.parentNode;
+    todoList.removeChild(li);
+    cleanTodos = todos.filter((function (todos) {
+        return todos.id !== parseInt(li.id);
+    }));
+    todos = cleanTodos;
+    saveTodos();
 }
 
 function showTodos(text) {
@@ -57,5 +63,6 @@ function submitHahdler(event) {
 function init() {
     loadToDos();
     todoForm.addEventListener('submit', submitHahdler);
+
 }
 init();
